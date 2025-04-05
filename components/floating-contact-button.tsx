@@ -216,7 +216,7 @@ export function FloatingContactButton() {
                 className="social-button"
               >
                 <a
-                  href="https://www.linkedin.com/in/phleodellydev"
+                  href="https://www.linkedin.com/in/felix-ashong"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -232,7 +232,7 @@ export function FloatingContactButton() {
                 className="social-button"
               >
                 <a
-                  href="https://github.com/phleodelly"
+                  href="https://github.com/FelixAshong"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
