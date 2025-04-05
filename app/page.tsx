@@ -1,12 +1,11 @@
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Download, Github, Linkedin, Mail, MapPin, MessageSquare, Twitter } from "lucide-react"
-import ContactForm from "@/components/contact-form"
 import SkillBar from "@/components/skill-bar"
 import AnimatedSection from "@/components/animated-section"
-import FloatingContactButton from "@/components/floating-contact-button"
+import { FloatingContactButton } from "@/components/floating-contact-button"
 import type { ReactNode } from "react"
 import Image from "next/image"
 
@@ -87,7 +86,7 @@ export default function Home() {
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="contact">Contact</TabsTrigger>
+            <TabsTrigger value="certifications">Certifications</TabsTrigger>
           </TabsList>
 
           {/* Experience Tab */}
@@ -190,65 +189,54 @@ export default function Home() {
             </AnimatedSection>
           </TabsContent>
 
-          {/* Contact Tab */}
-          <TabsContent value="contact">
+          {/* Certifications Tab */}
+          <TabsContent value="certifications">
             <AnimatedSection>
-              <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <p className="mb-4">
-                    Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
-                  </p>
-
-                  <div className="space-y-4 mb-6">
-                    <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5 text-primary" />
-                      <a href="mailto:phleodelly@gmail.com" className="hover:underline">
-                        phleodelly@gmail.com
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <MapPin className="h-5 w-5 text-primary" />
-                      <span>Accra, Ghana</span>
-                    </div>
+              <h2 className="text-3xl font-bold mb-6">Professional Certifications</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="certificate-card group">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src="/alx-certificate.jpeg"
+                      alt="ALX AI Career Essentials Certificate"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
                   </div>
+                  <CardContent className="p-6">
+                    <CardTitle className="text-xl font-semibold mb-2">ALX AI Career Essentials</CardTitle>
+                    <CardDescription className="mb-4">
+                      Comprehensive program covering AI fundamentals, machine learning, and data science.
+                    </CardDescription>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">AI Fundamentals</span>
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Machine Learning</span>
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Data Science</span>
+                    </div>
+                  </CardContent>
+                </Card>
 
-                  <h3 className="text-xl font-semibold mb-3">Connect on Social Media</h3>
-                  <div className="flex gap-4">
-                    <Button asChild size="icon" variant="outline">
-                      <a
-                        href="https://github.com/FelixAshong"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub"
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button asChild size="icon" variant="outline">
-                      <a href="https://twitter.com/phleodelly" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <Twitter className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button asChild size="icon" variant="outline">
-                      <a
-                        href="https://linkedin.com/in/felix-ashong"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button asChild size="icon" variant="outline">
-                      <a href="https://wa.me/+233545551579" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <MessageSquare className="h-5 w-5" />
-                      </a>
-                    </Button>
+                <Card className="certificate-card group">
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src="/uiux-certificate.jpg"
+                      alt="UI/UX Design Certification"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
                   </div>
-                </div>
-
-                <ContactForm />
+                  <CardContent className="p-6">
+                    <CardTitle className="text-xl font-semibold mb-2">UI/UX Design Certification</CardTitle>
+                    <CardDescription className="mb-4">
+                      Specialized program in user interface and experience design.
+                    </CardDescription>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">UI Design</span>
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">UX Research</span>
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Figma</span>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </AnimatedSection>
           </TabsContent>
