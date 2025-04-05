@@ -8,14 +8,15 @@ import SkillBar from "@/components/skill-bar"
 import AnimatedSection from "@/components/animated-section"
 import FloatingContactButton from "@/components/floating-contact-button"
 import type { ReactNode } from "react"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="container mx-auto py-6 px-4 md:px-6">
+      <header className="container mx-auto py-6 px-4 md:px-6 animate-fade-in">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Portfolio</h1>
+          <h1 className="text-2xl font-bold text-primary">Portfolio</h1>
           <ModeToggle />
         </div>
       </header>
@@ -24,18 +25,25 @@ export default function Home() {
       <AnimatedSection>
         <section className="container mx-auto py-12 px-4 md:px-6">
           <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="w-40 h-40 rounded-full overflow-hidden bg-muted flex items-center justify-center">
-              <span className="text-4xl">👨‍💻</span>
+            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden bg-primary/5 flex items-center justify-center hover-scale animate-scale shadow-lg border-4 border-white dark:border-gray-800">
+              <Image 
+                src="/profile.jpg" 
+                alt="Felix N.O Ashong" 
+                width={224}
+                height={224}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">Felix N.O Ashong 🇬🇭</h1>
+            <div className="flex-1 text-center md:text-left animate-slide-up">
+              <h1 className="text-4xl md:text-5xl font-bold mb-2 text-primary">Felix N.O Ashong 🇬🇭</h1>
               <h2 className="text-2xl md:text-3xl text-muted-foreground mb-4">Full-Stack Web Developer</h2>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
-                <div className="flex items-center gap-1 text-muted-foreground">
+                <div className="flex items-center gap-1 text-muted-foreground hover-scale">
                   <MapPin size={16} />
                   <span>Accra, Ghana</span>
                 </div>
-                <div className="flex items-center gap-1 text-muted-foreground">
+                <div className="flex items-center gap-1 text-muted-foreground hover-scale">
                   <Mail size={16} />
                   <a href="mailto:phleodelly@gmail.com" className="hover:underline">
                     phleodelly@gmail.com
@@ -43,24 +51,24 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="hover-scale">
                   <a href="https://phleodelly.netlify.app" target="_blank" rel="noopener noreferrer">
                     Portfolio
                   </a>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="hover-scale">
                   <a href="https://github.com/phleodelly" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
                     GitHub
                   </a>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="hover-scale">
                   <a href="https://linkedin.com/in/felix-ashong" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="mr-2 h-4 w-4" />
                     LinkedIn
                   </a>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="hover-scale">
                   <a href="https://twitter.com/phleodelly" target="_blank" rel="noopener noreferrer">
                     <Twitter className="mr-2 h-4 w-4" />
                     Twitter
@@ -74,7 +82,7 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="container mx-auto py-8 px-4 md:px-6">
-        <Tabs defaultValue="experience" className="mb-12">
+        <Tabs defaultValue="experience" className="mb-12 animate-fade-in">
           <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
