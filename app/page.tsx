@@ -6,6 +6,7 @@ import { Download, Github, Linkedin, Mail, MapPin, MessageSquare, Twitter } from
 import SkillBar from "@/components/skill-bar"
 import AnimatedSection from "@/components/animated-section"
 import { FloatingContactButton } from "@/components/floating-contact-button"
+import { CertificateCard } from "@/components/certificate-card"
 import type { ReactNode } from "react"
 import Image from "next/image"
 
@@ -194,49 +195,18 @@ export default function Home() {
             <AnimatedSection>
               <h2 className="text-3xl font-bold mb-6">Professional Certifications</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="certificate-card group">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src="/alx-certificate.jpeg"
-                      alt="ALX AI Career Essentials Certificate"
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <CardTitle className="text-xl font-semibold mb-2">ALX AI Career Essentials</CardTitle>
-                    <CardDescription className="mb-4">
-                      Comprehensive program covering AI fundamentals, machine learning, and data science.
-                    </CardDescription>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">AI Fundamentals</span>
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Machine Learning</span>
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Data Science</span>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="certificate-card group">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src="/uiux-certificate.jpg"
-                      alt="UI/UX Design Certification"
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <CardTitle className="text-xl font-semibold mb-2">UI/UX Design Certification</CardTitle>
-                    <CardDescription className="mb-4">
-                      Specialized program in user interface and experience design.
-                    </CardDescription>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">UI Design</span>
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">UX Research</span>
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Figma</span>
-                    </div>
-                  </CardContent>
-                </Card>
+                <CertificateCard
+                  imageSrc="/alx-certificate.jpeg"
+                  title="ALX AI Career Essentials"
+                  description="Comprehensive program covering AI fundamentals, machine learning, and data science."
+                  skills={["AI Fundamentals", "Machine Learning", "Data Science"]}
+                />
+                <CertificateCard
+                  imageSrc="/uiux-certificate.jpg"
+                  title="UI/UX Design Certification"
+                  description="Specialized program in user interface and experience design."
+                  skills={["UI Design", "UX Research", "Figma"]}
+                />
               </div>
             </AnimatedSection>
           </TabsContent>
