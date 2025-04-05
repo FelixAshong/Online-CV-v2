@@ -20,10 +20,10 @@ import { toast } from "sonner"
 import { motion } from "framer-motion"
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  subject: z.string().min(5, { message: "Subject must be at least 5 characters" }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
 })
 
 export function FloatingContactButton() {
@@ -54,11 +54,17 @@ export function FloatingContactButton() {
         throw new Error("Failed to send message")
       }
 
-      toast.success("Message sent successfully!")
+      toast.success("Message sent successfully! I'll get back to you soon.", {
+        duration: 5000,
+        position: "top-center",
+      })
       form.reset()
     } catch (error) {
       console.error("Error:", error)
-      toast.error("Failed to send message. Please try again.")
+      toast.error("Failed to send message. Please try again.", {
+        duration: 5000,
+        position: "top-center",
+      })
     } finally {
       setIsLoading(false)
     }
@@ -80,9 +86,9 @@ export function FloatingContactButton() {
           </Button>
         </motion.div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] glass-effect">
+      <DialogContent className="sm:max-w-[500px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
         <DialogHeader>
-          <DialogTitle className="section-title text-2xl">
+          <DialogTitle className="text-2xl font-bold text-gray-900 dark:text-white">
             Get In Touch
           </DialogTitle>
         </DialogHeader>
@@ -92,14 +98,14 @@ export function FloatingContactButton() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <Label htmlFor="name" className="text-sm font-semibold text-black dark:text-gray-300">
-              Name
+            <Label htmlFor="name" className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              Your Name
             </Label>
             <Input
               id="name"
-              placeholder="Your name"
+              placeholder="Enter your name"
               {...form.register("name")}
-              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-[hsl(var(--ghana-yellow))]"
             />
             {form.formState.errors.name && (
               <p className="text-sm text-red-500 mt-1">
@@ -107,20 +113,21 @@ export function FloatingContactButton() {
               </p>
             )}
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Label htmlFor="email" className="text-sm font-semibold text-black dark:text-gray-300">
-              Email
+            <Label htmlFor="email" className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              Email Address
             </Label>
             <Input
               id="email"
               type="email"
-              placeholder="your@email.com"
+              placeholder="Enter your email"
               {...form.register("email")}
-              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-[hsl(var(--ghana-yellow))]"
             />
             {form.formState.errors.email && (
               <p className="text-sm text-red-500 mt-1">
@@ -128,19 +135,20 @@ export function FloatingContactButton() {
               </p>
             )}
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Label htmlFor="subject" className="text-sm font-semibold text-black dark:text-gray-300">
+            <Label htmlFor="subject" className="text-sm font-semibold text-gray-900 dark:text-gray-100">
               Subject
             </Label>
             <Input
               id="subject"
-              placeholder="What's this about?"
+              placeholder="Enter subject"
               {...form.register("subject")}
-              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-[hsl(var(--ghana-yellow))]"
             />
             {form.formState.errors.subject && (
               <p className="text-sm text-red-500 mt-1">
@@ -148,19 +156,21 @@ export function FloatingContactButton() {
               </p>
             )}
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Label htmlFor="message" className="text-sm font-semibold text-black dark:text-gray-300">
+            <Label htmlFor="message" className="text-sm font-semibold text-gray-900 dark:text-gray-100">
               Message
             </Label>
             <Textarea
               id="message"
-              placeholder="Your message..."
+              placeholder="Your message"
+              rows={4}
               {...form.register("message")}
-              className="input-field min-h-[100px] bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+              className="input-field min-h-[100px] bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-[hsl(var(--ghana-yellow))]"
             />
             {form.formState.errors.message && (
               <p className="text-sm text-red-500 mt-1">
@@ -168,6 +178,7 @@ export function FloatingContactButton() {
               </p>
             )}
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -175,10 +186,17 @@ export function FloatingContactButton() {
           >
             <Button
               type="submit"
-              className="button-primary w-full"
+              className="w-full bg-[hsl(var(--ghana-yellow))] hover:bg-[hsl(var(--ghana-yellow))]/90 text-white font-medium py-6 shadow-lg hover:shadow-xl transition-all duration-300"
               disabled={isLoading}
             >
-              {isLoading ? "Sending..." : "Send Message"}
+              {isLoading ? (
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  <span>Sending...</span>
+                </div>
+              ) : (
+                "Send Message"
+              )}
             </Button>
           </motion.div>
         </form>
@@ -188,7 +206,7 @@ export function FloatingContactButton() {
           transition={{ delay: 0.6 }}
           className="mt-6"
         >
-          <h4 className="text-sm font-semibold mb-3 text-black dark:text-gray-300">Connect with me</h4>
+          <h4 className="text-sm font-semibold mb-3 text-gray-900 dark:text-gray-100">Connect with me</h4>
           <div className="flex gap-2">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Button
