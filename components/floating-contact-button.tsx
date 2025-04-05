@@ -54,16 +54,16 @@ export function FloatingContactButton() {
         throw new Error("Failed to send message")
       }
 
-      toast.success("Message sent successfully! I'll get back to you soon.", {
+      toast.success("Message sent successfully!", {
+        description: "I'll get back to you soon.",
         duration: 5000,
-        position: "top-center",
       })
       form.reset()
     } catch (error) {
       console.error("Error:", error)
-      toast.error("Failed to send message. Please try again.", {
+      toast.error("Failed to send message", {
+        description: "Please try again later.",
         duration: 5000,
-        position: "top-center",
       })
     } finally {
       setIsLoading(false)
@@ -186,7 +186,7 @@ export function FloatingContactButton() {
           >
             <Button
               type="submit"
-              className="w-full bg-[hsl(var(--ghana-yellow))] hover:bg-[hsl(var(--ghana-yellow))]/90 text-white font-medium py-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-6 shadow-lg hover:shadow-xl transition-all duration-300 rounded-md"
               disabled={isLoading}
             >
               {isLoading ? (
