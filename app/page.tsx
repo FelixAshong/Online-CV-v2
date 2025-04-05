@@ -52,12 +52,12 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <Button asChild variant="outline" className="hover-scale">
-                  <a href="https://phleodelly.netlify.app" target="_blank" rel="noopener noreferrer">
+                  <a href="https://delly-portfolio-v3.onrender.com/" target="_blank" rel="noopener noreferrer">
                     Portfolio
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="hover-scale">
-                  <a href="https://github.com/phleodelly" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/FelixAshong" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
                     GitHub
                   </a>
