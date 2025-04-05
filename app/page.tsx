@@ -217,7 +217,7 @@ export default function Home() {
                   <div className="flex gap-4">
                     <Button asChild size="icon" variant="outline">
                       <a
-                        href="https://github.com/phleodelly"
+                        href="https://github.com/FelixAshong"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
@@ -241,7 +241,7 @@ export default function Home() {
                       </a>
                     </Button>
                     <Button asChild size="icon" variant="outline">
-                      <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                      <a href="https://wa.me/+233545551579" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <MessageSquare className="h-5 w-5" />
                       </a>
                     </Button>
