@@ -41,6 +41,7 @@ export function FloatingContactButton() {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setIsLoading(true)
+      
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -56,6 +57,7 @@ export function FloatingContactButton() {
       toast.success("Message sent successfully!")
       form.reset()
     } catch (error) {
+      console.error("Error:", error)
       toast.error("Failed to send message. Please try again.")
     } finally {
       setIsLoading(false)
@@ -90,11 +92,14 @@ export function FloatingContactButton() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <Label htmlFor="name" className="text-gray-700">Name</Label>
+            <Label htmlFor="name" className="text-sm font-semibold text-black dark:text-gray-300">
+              Name
+            </Label>
             <Input
               id="name"
+              placeholder="Your name"
               {...form.register("name")}
-              className="input-field"
+              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
             />
             {form.formState.errors.name && (
               <p className="text-sm text-red-500 mt-1">
@@ -107,12 +112,15 @@ export function FloatingContactButton() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Label htmlFor="email" className="text-gray-700">Email</Label>
+            <Label htmlFor="email" className="text-sm font-semibold text-black dark:text-gray-300">
+              Email
+            </Label>
             <Input
               id="email"
               type="email"
+              placeholder="your@email.com"
               {...form.register("email")}
-              className="input-field"
+              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
             />
             {form.formState.errors.email && (
               <p className="text-sm text-red-500 mt-1">
@@ -125,11 +133,14 @@ export function FloatingContactButton() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Label htmlFor="subject" className="text-gray-700">Subject</Label>
+            <Label htmlFor="subject" className="text-sm font-semibold text-black dark:text-gray-300">
+              Subject
+            </Label>
             <Input
               id="subject"
+              placeholder="What's this about?"
               {...form.register("subject")}
-              className="input-field"
+              className="input-field bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
             />
             {form.formState.errors.subject && (
               <p className="text-sm text-red-500 mt-1">
@@ -142,11 +153,14 @@ export function FloatingContactButton() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Label htmlFor="message" className="text-gray-700">Message</Label>
+            <Label htmlFor="message" className="text-sm font-semibold text-black dark:text-gray-300">
+              Message
+            </Label>
             <Textarea
               id="message"
+              placeholder="Your message..."
               {...form.register("message")}
-              className="input-field min-h-[120px]"
+              className="input-field min-h-[100px] bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
             />
             {form.formState.errors.message && (
               <p className="text-sm text-red-500 mt-1">
@@ -174,7 +188,7 @@ export function FloatingContactButton() {
           transition={{ delay: 0.6 }}
           className="mt-6"
         >
-          <h4 className="text-sm font-medium mb-3 text-gray-700">Connect with me</h4>
+          <h4 className="text-sm font-semibold mb-3 text-black dark:text-gray-300">Connect with me</h4>
           <div className="flex gap-2">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Button

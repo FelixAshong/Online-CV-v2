@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    const { name, email, subject, message } = await req.json()
+    const { name, email, subject, message } = await request.json()
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -16,9 +16,9 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: `Portfolio Contact: ${subject}`,
+      subject: `New Contact Form Submission: ${subject}`,
       html: `
-        <h3>New Contact Message</h3>
+        <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Subject:</strong> ${subject}</p>
@@ -34,9 +34,9 @@ export async function POST(req: Request) {
       { status: 200 }
     )
   } catch (error) {
-    console.error('Email error:', error)
+    console.error('Error sending email:', error)
     return NextResponse.json(
-      { message: 'Error sending email' },
+      { error: 'Failed to send email' },
       { status: 500 }
     )
   }
