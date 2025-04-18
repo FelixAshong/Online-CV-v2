@@ -37,7 +37,7 @@ export default function Home() {
             </div>
             <div className="flex-1 text-center md:text-left animate-slide-up">
               <h1 className="text-4xl md:text-5xl font-bold mb-2 text-primary">Felix N.O Ashong 🇬🇭</h1>
-              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-4">Full-Stack Web Developer</h2>
+              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-4">Full-Stack Web & Software Developer</h2>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
                 <div className="flex items-center gap-1 text-muted-foreground hover-scale">
                   <MapPin size={16} />
