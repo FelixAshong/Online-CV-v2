@@ -141,25 +141,51 @@ export default function Home() {
           {/* Skills Tab */}
           <TabsContent value="skills">
             <AnimatedSection>
-              <h2 className="text-3xl font-bold mb-6">Technical Skills</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <SkillBar name="HTML & CSS" percentage={95} />
-                  <SkillBar name="JavaScript" percentage={70} />
-                  <SkillBar name="React" percentage={60} />
-                  <SkillBar name="Bootstrap" percentage={75} />
+              <h2 className="text-3xl font-bold mb-6 text-center">Technical Skills</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Frontend Development</h3>
+                  <div className="space-y-6">
+                    <SkillBar name="HTML5 & CSS3" percentage={98} />
+                    <SkillBar name="JavaScript (ES6+)" percentage={90} />
+                    <SkillBar name="React.js" percentage={92} />
+                    <SkillBar name="Tailwind CSS" percentage={88} />
+                    <SkillBar name="Next.js" percentage={85} />
+                  </div>
                 </div>
-                <div className="space-y-6">
-                  <SkillBar name="UI/UX" percentage={50} />
-                  <SkillBar name="SQL" percentage={20} />
-                  <SkillBar name="Flutter" percentage={10} />
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">Backend Development</h3>
+                  <div className="space-y-6">
+                    <SkillBar name="Node.js" percentage={90} />
+                    <SkillBar name="Express.js" percentage={85} />
+                    <SkillBar name="MongoDB" percentage={80} />
+                    <SkillBar name="SQL Databases" percentage={75} />
+                    <SkillBar name="GraphQL" percentage={70} />
+                    <SkillBar name="RESTful APIs" percentage={85} />
+                    <SkillBar name="Microservices" percentage={75} />
+                  </div>
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold mt-12 mb-6">Languages</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <SkillBar name="English" percentage={80} />
-                <SkillBar name="Twi" percentage={95} />
+              <h3 className="text-2xl font-semibold mb-4 text-center">Tools & Technologies</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                <Card className="p-4">
+                  <h4 className="font-medium">Git & GitHub</h4>
+                </Card>
+                <Card className="p-4">
+                  <h4 className="font-medium">React</h4>
+                </Card>
+                <Card className="p-4">
+                  <h4 className="font-medium">Node.js</h4>
+                </Card>
+                <Card className="p-4">
+                  <h4 className="font-medium">VS Code</h4>
+                </Card>
+                <Card className="p-4">
+                  <h4 className="font-medium">Figma</h4>
+                </Card>
               </div>
             </AnimatedSection>
           </TabsContent>
