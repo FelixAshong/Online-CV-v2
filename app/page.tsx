@@ -16,7 +16,7 @@ export default function Home() {
       {/* Header */}
       <header className="container mx-auto py-6 px-4 md:px-6 animate-fade-in">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-primary">Portfolio</h1>
+          <h1 className="text-2xl font-bold text-primary">Online CV</h1>
           <ModeToggle />
         </div>
       </header>
@@ -182,10 +182,7 @@ export default function Home() {
                     <SkillBar name="Node.js" percentage={90} />
                     <SkillBar name="Express.js" percentage={85} />
                     <SkillBar name="MongoDB" percentage={80} />
-                    <SkillBar name="SQL Databases" percentage={75} />
-                    <SkillBar name="GraphQL" percentage={70} />
                     <SkillBar name="RESTful APIs" percentage={85} />
-                    <SkillBar name="Microservices" percentage={75} />
                   </div>
                 </div>
               </div>

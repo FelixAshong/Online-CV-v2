@@ -280,7 +280,7 @@ export function FloatingContactButton() {
                 className="social-button"
               >
                 <a
-                  href="https://wa.me/233557321725"
+                  href="https://wa.me/233593125279"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
