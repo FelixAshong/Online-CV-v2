@@ -46,7 +46,7 @@ export default function Home() {
                 <div className="flex items-center gap-1 text-muted-foreground hover-scale">
                   <Mail size={16} />
                   <a href="mailto:phleodelly@gmail.com" className="hover:underline">
-                    phleodelly@gmail.com
+                    felixashong4@gmail.com
                   </a>
                 </div>
               </div>
@@ -112,6 +112,27 @@ export default function Home() {
                     <li>Worked on food ordering app UI using HTML, CSS, JS, Bootstrap, and React</li>
                     <li>Collaborated with the design team to implement responsive layouts</li>
                     <li>Participated in code reviews and improved application performance</li>
+                  </ul>
+                </Card>
+
+                <Card className="p-6">
+                  <h3 className="text-xl font-semibold">Networking Intern</h3>
+                  <p className="text-muted-foreground">
+                    <a
+                      href="https://ugcs.ug.edu.gh/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      University Of Ghana Computing Systems 
+                    </a>{" "}
+                    | Jan 2024 – Mar 2024
+                  </p>
+                  <ul className="list-disc list-inside mt-2 text-muted-foreground">
+                    <li>Collaborated with IT professionals to identify system needs and implement solutions </li>
+                    <li>Configured and installed network hardware including routers, switches, and firewalls</li>
+                    <li>Replaced faulty network hardware components to improve performance</li>
+                    <li>Completed day-to-day duties accurately and efficiently</li>
                   </ul>
                 </Card>
 
