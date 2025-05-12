@@ -245,12 +245,6 @@ export default function Home() {
                   description="Comprehensive program covering AI fundamentals, machine learning, and data science."
                   skills={["AI Fundamentals", "Machine Learning", "Data Science"]}
                 />
-                 <CertificateCard
-                  imageSrc="/LinkedIn-marketing.jpg"
-                  title="LinkedIn Marketing Solutions Fundamentals Certification"
-                  description="Comprehensive certification focused on LinkedIn Ads, campaign setup and optimization, audience targeting, and performance analytics."
-                  skills={["LinkedIn Advertising", "Campaign Management", "Audience Targeting", "Performance Measurement"]}
-                />
                 <CertificateCard
                   imageSrc="/Linkedin- design.jpg"
                   title="LinkedIn Content and Creative Design Certification"
@@ -258,10 +252,10 @@ export default function Home() {
                   skills={["LinkedIn Content Strategy", "Creative Design", "Campaign Optimization", "Audience Targeting", "Performance Analytics"]}
                 />
                 <CertificateCard
-                  imageSrc="/linkedin-market.jpg"
-                  title="LinkedIn Marketing Strategy Certification"
-                  description="A professional certification covering LinkedIn content strategy, creative design, audience targeting, campaign optimization, and performance analytics."
-                  skills={["Content Strategy","Creative Design","Campaign Optimization","Audience Targeting","Performance Analytics"]}
+                  imageSrc="/comptia.jpeg"
+                  title="Getting Started as a Full-Stack Web Developer"
+                  description="A foundational certification introducing full-stack web development concepts, including front-end design, back-end development, databases, APIs, and deployment workflows."
+                  skills={["HTML & CSS","JavaScript","React","Node.js","Database Management","REST APIs","Version Control (Git)","Deployment"]}
                 />
                 <CertificateCard
                   imageSrc="/uiux-certificate.jpg"
