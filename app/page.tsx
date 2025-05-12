@@ -252,6 +252,18 @@ export default function Home() {
                   skills={["LinkedIn Advertising", "Campaign Management", "Audience Targeting", "Performance Measurement"]}
                 />
                 <CertificateCard
+                  imageSrc="/Linkedin- design.jpg"
+                  title="LinkedIn Content and Creative Design Certification"
+                  description="Comprehensive certification focused on content strategy, creative design, audience targeting, and performance measurement on LinkedIn."
+                  skills={["LinkedIn Content Strategy", "Creative Design", "Campaign Optimization", "Audience Targeting", "Performance Analytics"]}
+                />
+                <CertificateCard
+                  imageSrc="/linkedin-market.jpg"
+                  title="LinkedIn Marketing Strategy Certification"
+                  description="A professional certification covering LinkedIn content strategy, creative design, audience targeting, campaign optimization, and performance analytics."
+                  skills={["Content Strategy","Creative Design","Campaign Optimization","Audience Targeting","Performance Analytics"]}
+                />
+                <CertificateCard
                   imageSrc="/uiux-certificate.jpg"
                   title="UI/UX Design Certification"
                   description="Specialized program in user interface and experience design."
