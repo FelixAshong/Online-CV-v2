@@ -245,6 +245,12 @@ export default function Home() {
                   description="Comprehensive program covering AI fundamentals, machine learning, and data science."
                   skills={["AI Fundamentals", "Machine Learning", "Data Science"]}
                 />
+                 <CertificateCard
+                  imageSrc="/LinkedIn-marketing.jpg"
+                  title="LinkedIn Marketing Solutions Fundamentals Certification"
+                  description="Comprehensive certification focused on LinkedIn Ads, campaign setup and optimization, audience targeting, and performance analytics."
+                  skills={["LinkedIn Advertising", "Campaign Management", "Audience Targeting", "Performance Measurement"]}
+                />
                 <CertificateCard
                   imageSrc="/uiux-certificate.jpg"
                   title="UI/UX Design Certification"
