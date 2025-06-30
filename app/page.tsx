@@ -37,7 +37,7 @@ export default function Home() {
             </div>
             <div className="flex-1 text-center md:text-left animate-slide-up">
               <h1 className="text-4xl md:text-5xl font-bold mb-2 text-primary">Felix N.O Ashong 🇬🇭</h1>
-              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-4">Front-End Developer | Full Stack Web Developer</h2>
+              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-4">Full-Stack Web Developer | I.T System Support Specialist</h2>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
                 <div className="flex items-center gap-1 text-muted-foreground hover-scale">
                   <MapPin size={16} />
@@ -95,6 +95,16 @@ export default function Home() {
             <AnimatedSection>
               <h2 className="text-3xl font-bold mb-6">Work Experience</h2>
               <div className="space-y-6">
+                <Card className="p-6">
+                  <h3 className="text-xl font-semibold">IT System Support Specialist</h3>
+                  <p className="text-muted-foreground">
+                    Self-employed | 2022 – Present
+                  </p>
+                  <ul className="list-disc list-inside mt-2 text-muted-foreground">
+                    <li>Providing comprehensive IT infrastructure support, network troubleshooting, and system maintenance services for various clients and organizations.</li>
+                  </ul>
+                </Card>
+
                 <Card className="p-6">
                   <h3 className="text-xl font-semibold">Intern Front-End Developer</h3>
                   <p className="text-muted-foreground">
@@ -164,7 +174,7 @@ export default function Home() {
             <AnimatedSection>
               <h2 className="text-3xl font-bold mb-6 text-center">Technical Skills</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Frontend Development</h3>
                   <div className="space-y-6">
@@ -185,24 +195,54 @@ export default function Home() {
                     <SkillBar name="RESTful APIs" percentage={85} />
                   </div>
                 </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">IT System Support & Administration</h3>
+                  <div className="space-y-6">
+                    <SkillBar name="IT System Support" percentage={88} />
+                    <SkillBar name="Network Administration" percentage={88} />
+                    <SkillBar name="System Troubleshooting" percentage={92} />
+                    <SkillBar name="Hardware Configuration" percentage={85} />
+                    <SkillBar name="Network Security" percentage={80} />
+                    <SkillBar name="IT Infrastructure" percentage={87} />
+                    <SkillBar name="System Maintenance" percentage={90} />
+                  </div>
+                </div>
               </div>
 
               <h3 className="text-2xl font-semibold mb-4 text-center">Tools & Technologies</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-                <Card className="p-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub" className="w-12 h-12 object-contain mb-2" />
                   <h4 className="font-medium">Git & GitHub</h4>
                 </Card>
-                <Card className="p-4">
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-12 h-12 object-contain mb-2" />
                   <h4 className="font-medium">React</h4>
                 </Card>
-                <Card className="p-4">
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-12 h-12 object-contain mb-2" />
                   <h4 className="font-medium">Node.js</h4>
                 </Card>
-                <Card className="p-4">
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" className="w-12 h-12 object-contain mb-2" />
                   <h4 className="font-medium">VS Code</h4>
                 </Card>
-                <Card className="p-4">
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" className="w-12 h-12 object-contain mb-2" />
                   <h4 className="font-medium">Figma</h4>
+                </Card>
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" alt="Webpack" className="w-12 h-12 object-contain mb-2" />
+                  <h4 className="font-medium">Webpack</h4>
+                </Card>
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/networkx/networkx-original.svg" alt="Network Tools" className="w-12 h-12 object-contain mb-2" />
+                  <h4 className="font-medium">Network Tools</h4>
+                </Card>
+                <Card className="p-4 flex flex-col items-center">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="System Admin" className="w-12 h-12 object-contain mb-2" />
+                  <h4 className="font-medium">System Admin</h4>
                 </Card>
               </div>
             </AnimatedSection>
@@ -216,19 +256,16 @@ export default function Home() {
                 <Card className="p-6">
                   <h3 className="text-xl font-semibold">B.Sc. Information Technology</h3>
                   <p className="text-muted-foreground">University of Ghana | 2022 – Present</p>
-                  <p className="mt-2">Focusing on web development, software engineering, and database management.</p>
                 </Card>
 
                 <Card className="p-6">
                   <h3 className="text-xl font-semibold">High School Education</h3>
                   <p className="text-muted-foreground">Forces SHTS | 2018 – 2021</p>
-                  <p className="mt-2">Completed secondary education with focus on science and mathematics.</p>
                 </Card>
 
                 <Card className="p-6">
                   <h3 className="text-xl font-semibold">Primary & Junior High School</h3>
                   <p className="text-muted-foreground">Mary Star of the Sea Int. School | 2003 – 2018</p>
-                  <p className="mt-2">Received foundational education and developed interest in technology.</p>
                 </Card>
               </div>
             </AnimatedSection>
