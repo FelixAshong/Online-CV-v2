@@ -219,6 +219,7 @@ export function FloatingContactButton() {
                   href="https://www.linkedin.com/in/felix-ashong"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="LinkedIn"
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
@@ -235,6 +236,7 @@ export function FloatingContactButton() {
                   href="https://github.com/FelixAshong"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                 >
                   <Github className="h-4 w-4" />
                 </a>
@@ -251,6 +253,7 @@ export function FloatingContactButton() {
                   href="https://twitter.com/phleodelly"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Twitter"
                 >
                   <Twitter className="h-4 w-4" />
                 </a>
@@ -267,6 +270,7 @@ export function FloatingContactButton() {
                   href="https://instagram.com/phleodelly"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Instagram"
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
@@ -283,6 +287,7 @@ export function FloatingContactButton() {
                   href="https://wa.me/233593125279"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="WhatsApp"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
