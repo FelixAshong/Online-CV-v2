@@ -252,20 +252,45 @@ export default function Home() {
           <TabsContent value="education">
             <AnimatedSection>
               <h2 className="text-3xl font-bold mb-6">Education</h2>
-              <div className="space-y-6">
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold">B.Sc. Information Technology</h3>
-                  <p className="text-muted-foreground">University of Ghana | 2022 – Present</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="certificate-card group">
+                  <div className="relative w-full h-[200px] overflow-hidden bg-gray-50 dark:bg-gray-900">
+                    <img
+                      src="/legon.jpg"
+                      alt="University of Ghana Logo"
+                      className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <CardTitle className="text-xl font-semibold mb-2">B.Sc. Information Technology</CardTitle>
+                    <CardDescription className="mb-2">University of Ghana | 2022 – Present</CardDescription>
+                  </CardContent>
                 </Card>
-
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold">High School Education</h3>
-                  <p className="text-muted-foreground">Forces SHTS | 2018 – 2021</p>
+                <Card className="certificate-card group">
+                  <div className="relative w-full h-[200px] overflow-hidden bg-gray-50 dark:bg-gray-900">
+                    <img
+                      src="/forces.jpg"
+                      alt="Forces SHTS Logo"
+                      className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <CardTitle className="text-xl font-semibold mb-2">High School Education</CardTitle>
+                    <CardDescription className="mb-2">Forces SHTS | 2018 – 2021</CardDescription>
+                  </CardContent>
                 </Card>
-
-                <Card className="p-6">
-                  <h3 className="text-xl font-semibold">Primary & Junior High School</h3>
-                  <p className="text-muted-foreground">Mary Star of the Sea Int. School | 2003 – 2018</p>
+                <Card className="certificate-card group">
+                  <div className="relative w-full h-[200px] overflow-hidden bg-gray-50 dark:bg-gray-900">
+                    <img
+                      src="/mary.jpeg"
+                      alt="Mary Star of the Sea Int. School Logo"
+                      className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <CardTitle className="text-xl font-semibold mb-2">Primary & Junior High School</CardTitle>
+                    <CardDescription className="mb-2">Mary Star of the Sea Int. School | 2003 – 2018</CardDescription>
+                  </CardContent>
                 </Card>
               </div>
             </AnimatedSection>
@@ -279,26 +304,26 @@ export default function Home() {
                 <CertificateCard
                   imageSrc="/alx-certificate.jpeg"
                   title="ALX AI Career Essentials"
-                  description="Comprehensive program covering AI fundamentals, machine learning, and data science."
-                  skills={["AI Fundamentals", "Machine Learning", "Data Science"]}
+                  description="Comprehensive program covering AI fundamentals, machine learning, and data science. Developed skills in Python, data analysis, and AI applications. Explored neural networks, deep learning, and real-world AI use cases. Gained hands-on experience with data preprocessing, model training, and evaluation. Learned about ethical considerations in AI and best practices for deploying AI solutions."
+                  skills={["AI Fundamentals", "Machine Learning", "Data Science", "Python", "Neural Networks", "Deep Learning", "Data Analysis", "Model Training", "AI Ethics", "Deployment"]}
                 />
                 <CertificateCard
-                  imageSrc="/Linkedin- design.jpg"
-                  title="LinkedIn Content and Creative Design Certification"
-                  description="Comprehensive certification focused on content strategy, creative design, audience targeting, and performance measurement on LinkedIn."
-                  skills={["LinkedIn Content Strategy", "Creative Design", "Campaign Optimization", "Audience Targeting", "Performance Analytics"]}
+                  imageSrc="/comptia a+.jpg"
+                  title="CompTIA A+ Certification (Core 1 220-1101)"
+                  description="Congratulations on completing the CompTIA A+ Core 1 (220-1101) course! You've gained essential skills in configuring and setting up mobile devices, mastering key hardware components like motherboards, CPUs, RAM, and storage. You explored networking fundamentals, covering configurations, protocols, and internet connections like fiber and LAN. Additionally, you learned about cloud computing, virtual machines, and cloud services. Finally, you developed troubleshooting techniques for hardware and network issues. You're now well-prepared for the CompTIA A+ Core 1 certification exam."
+                  skills={["Mobile Device Configuration", "Hardware Components", "Networking Fundamentals", "Cloud Computing", "Virtual Machines", "Troubleshooting"]}
                 />
                 <CertificateCard
                   imageSrc="/comptia.jpeg"
                   title="Getting Started as a Full-Stack Web Developer"
-                  description="A foundational certification introducing full-stack web development concepts, including front-end design, back-end development, databases, APIs, and deployment workflows."
-                  skills={["HTML & CSS","JavaScript","React","Node.js","Database Management","REST APIs","Version Control (Git)","Deployment"]}
+                  description="A foundational certification introducing full-stack web development concepts. Covered front-end design with HTML, CSS, and JavaScript, and back-end development using Node.js and Express.js. Gained experience with database management, RESTful APIs, and version control using Git. Learned about deployment workflows, project collaboration, and best practices for building scalable web applications. Developed hands-on projects to reinforce learning and practical skills."
+                  skills={["HTML & CSS", "JavaScript", "React", "Node.js", "Express.js", "Database Management", "REST APIs", "Version Control (Git)", "Deployment", "Project Collaboration", "Web App Best Practices"]}
                 />
                 <CertificateCard
-                  imageSrc="/uiux-certificate.jpg"
-                  title="UI/UX Design Certification"
-                  description="Specialized program in user interface and experience design."
-                  skills={["UI Design", "UX Research", "Figma"]}
+                  imageSrc="/google.jpeg"
+                  title="Google Technical Support Fundamentals"
+                  description="Comprehensive certification covering the fundamentals of technical support. Developed skills in information technology, operating systems, technical communication, and computer networking. Gained hands-on experience with software installation, customer and technical support, end user training, and troubleshooting. Explored computer architecture, Microsoft Windows, computer hardware, Linux, and mobile devices. Well-prepared to provide technical support and resolve hardware and network issues."
+                  skills={["Information Technology", "Operating Systems", "Technical Communication", "Computer Networking", "Software Installation", "Customer Support", "Technical Support", "End User Training", "Computer Architecture", "Microsoft Windows", "Computer Hardware", "Linux", "Mobile Devices", "Troubleshooting"]}
                 />
               </div>
             </AnimatedSection>
