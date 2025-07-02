@@ -308,7 +308,7 @@ export default function Home() {
                   skills={["AI Fundamentals", "Machine Learning", "Data Science", "Python", "Neural Networks", "Deep Learning", "Data Analysis", "Model Training", "AI Ethics", "Deployment"]}
                 />
                 <CertificateCard
-                  imageSrc="/comptia a+.png"
+                  imageSrc="/cp.png"
                   title="CompTIA A+ Certification (Core 1 220-1101)"
                   description="Congratulations on completing the CompTIA A+ Core 1 (220-1101) course! You've gained essential skills in configuring and setting up mobile devices, mastering key hardware components like motherboards, CPUs, RAM, and storage. You explored networking fundamentals, covering configurations, protocols, and internet connections like fiber and LAN. Additionally, you learned about cloud computing, virtual machines, and cloud services. Finally, you developed troubleshooting techniques for hardware and network issues. You're now well-prepared for the CompTIA A+ Core 1 certification exam."
                   skills={["Mobile Device Configuration", "Hardware Components", "Networking Fundamentals", "Cloud Computing", "Virtual Machines", "Troubleshooting"]}
